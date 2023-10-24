@@ -1,0 +1,49 @@
+&CONTROL
+  title = ' PbTe_PZ ',
+  calculation = 'scf',
+  restart_mode = 'from_scratch', 
+  nstep  = 200,
+  tstress = .TRUE.,
+  tprnfor = .TRUE.,
+  prefix = 'pbte',
+  pseudo_dir='/home/raagya/pseudo',
+  outdir = './tmp'
+/
+&SYSTEM
+  ibrav = 0,
+  celldm(1) =1.88973,
+  nat = 4,
+  ntyp = 2,
+  occupations='smearing',
+  smearing='fd',
+  degauss=0.003,
+  ecutwfc = 50.0,
+  ecutrho =400.0,
+/
+&ELECTRONS
+  conv_thr  =  1.0d-8
+/
+&ions
+/
+&cell
+cell_factor=4,
+cell_dofree='2Dxy',
+/
+
+ATOMIC_SPECIES
+Ge  72.64 Ge.UPF
+S   32.06 S.UPF
+
+CELL_PARAMETERS (alat=  1.88973000)
+   3.718604173  -0.000030346   0.000000000
+   0.000037269   3.950967427   0.000000000
+   0.000000000   0.000000000  23.006579499
+
+ATOMIC_POSITIONS (angstrom)
+Ge       2.789426461   3.544701229  12.709619384
+Ge       0.930143308   1.569208688  10.296875378
+S        0.930092469   1.881680393  12.638279262
+S        2.789482825   3.857135038  10.368237921
+
+K_POINTS automatic
+ 20 20 1 0 0 0 
