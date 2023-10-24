@@ -1,0 +1,45 @@
+&CONTROL
+  title = ' PbSe_PZ ',
+  calculation = 'scf',
+  restart_mode = 'from_scratch', 
+  nstep  = 200,
+  tstress = .TRUE.,
+  tprnfor = .TRUE.,
+  prefix = 'pbse',
+  pseudo_dir='../../../ps',
+  outdir = './tmp'
+/
+&SYSTEM
+  ibrav = 0,
+  celldm(1) =7.872,
+  nat = 2,
+  ntyp = 2,
+  nbnd =10,
+  ecutwfc = 45.0,
+  ecutrho =270.0,
+/
+&ELECTRONS
+  conv_thr  =  1.0d-8
+/
+&ions
+/
+&cell
+ cell_dofree='2Dxy'
+/
+
+ATOMIC_SPECIES
+Pb  207.2 Pb.UPF
+Se  78.96 Se.UPF
+
+CELL_PARAMETERS (alat=  7.87200000)
+   0.941869144  -0.000000000   0.000000000
+   0.470934572   0.815682606   0.000000000
+   0.000000000   0.000000000   3.000000000
+
+ATOMIC_POSITIONS (crystal)
+Pb       0.000000000  -0.000000000   0.063672352
+Se       0.333333333   0.333333333  -0.061910852
+
+K_POINTS automatic
+ 40 40 1 0 0 0 
+
