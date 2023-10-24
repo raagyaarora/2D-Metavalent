@@ -1,5 +1,8 @@
 # 2D-Metavalent
-Data files for research paper
+Data files for research paper: 
+Metavalent Bonding in 2D Chalcogenides: Structural Origin and Chemical Mechanisms
+Raagya Arora, Umesh Waghmare, and CNR Rao
+
 
 HP: Hexagonal Planar
 HD: Hexagonal Distorted
