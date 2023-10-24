@@ -1,0 +1,46 @@
+&CONTROL
+  title = ' SnTe_PZ ',
+  calculation = 'scf',
+  restart_mode = 'from_scratch',
+  nstep  = 200,
+  tstress = .TRUE.,
+  tprnfor = .TRUE.,
+  prefix = 'pbte',
+  pseudo_dir='../../../ps',
+  outdir = './tmps'
+/
+&SYSTEM
+  ibrav = 0,
+  celldm(1) = 8.04046871838000000,
+  nat = 2,
+  ntyp = 2,
+  nbnd =15,
+  ecutwfc = 50.0,
+  ecutrho =300.0,
+/
+&ELECTRONS
+  conv_thr  =  1.0d-8
+/
+&ions
+/
+&cell
+ cell_dofree='2Dxy'
+/
+
+ATOMIC_SPECIES
+Sn  118.69 Sn.UPF
+Te  127.6 Te.UPF
+
+CELL_PARAMETERS {alat}
+ 1.0  0.0 0.0
+ 0.0  1.0 0.0
+ 0.0  0.0 3.00
+
+
+ATOMIC_POSITIONS (crystal)
+Sn    0.00000     0.00000     0.0
+Te    0.50000     0.50000     0.0
+
+K_POINTS automatic
+40 40 1 0 0 0
+
