@@ -1,0 +1,9 @@
+COHPstartEnergy  -37
+COHPendEnergy     7
+COHPsteps 1000
+usebasisset pbeVaspFit2015
+basisfunctions Pb 6s 6p 5d
+basisfunctions Te 5s 5p 4d
+
+cohpbetween atom 1 atom 2 orbitalwise
+

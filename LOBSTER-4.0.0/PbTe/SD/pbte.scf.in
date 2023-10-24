@@ -1,0 +1,50 @@
+
+&CONTROL
+  title = ' PbTe_PZ ',
+  calculation = 'scf',
+  restart_mode = 'from_scratch',
+  nstep  = 200,
+  tstress = .TRUE.,
+  tprnfor = .TRUE.,
+  prefix = 'pbte',
+  pseudo_dir='./',
+  outdir = './tmp'
+  wf_collect=.true.,
+/
+&SYSTEM
+  ibrav = 0,
+  celldm(1) = 7.30,
+  nat = 2,
+  ntyp = 2,
+  nbnd =20,
+  ecutwfc = 42.0,
+  ecutrho =252.0,
+   nosym = .true.,
+   noinv = .true.,
+
+/
+&ELECTRONS
+  conv_thr  =  1.0d-8
+/
+&ions
+/
+&cell
+ cell_dofree='2Dxy'
+/
+
+ATOMIC_SPECIES
+Pb  207.2 Pb.UPF
+Te  127.6 Te.UPF
+
+CELL_PARAMETERS (alat=  7.30000000)
+   0.995641448   0.000038992   0.000000000
+   0.000038992   0.995633384   0.000000000
+   0.000000000   0.000000000   3.378690000
+
+ATOMIC_POSITIONS (crystal)
+Pb       0.001253251   0.002611340   0.060119716
+Te       0.500673611   0.501409220  -0.050119716
+
+K_POINTS automatic
+20 20 1 0 0 0
+
