@@ -1,0 +1,45 @@
+&CONTROL
+  title = ' SnS_PZ ',
+  calculation = 'scf',
+  restart_mode = 'from_scratch', 
+  nstep  = 200,
+  tstress = .TRUE.,
+  tprnfor = .TRUE.,
+  prefix = 'sns',
+  pseudo_dir='../../../ps',
+  outdir = './tmp'
+/
+&SYSTEM
+  ibrav = 0,
+  celldm(1) =7.872,
+  nat = 2,
+  ntyp = 2,
+  nbnd =10,
+  ecutwfc = 40.0,
+  ecutrho =240.0,
+/
+&ELECTRONS
+  conv_thr  =  1.0d-8
+/
+&ions
+/
+&cell
+ cell_dofree='2Dxy'
+/
+
+ATOMIC_SPECIES
+Sn  118.69 Sn.UPF
+S   32.06 S.UPF
+
+CELL_PARAMETERS (alat=  7.87200000)
+   0.873140523   0.000000000   0.000000000
+   0.436570262   0.756161874   0.000000000
+   0.000000000   0.000000000   3.000000000
+
+ATOMIC_POSITIONS (crystal)
+Sn       0.000000000  -0.000000000   0.059805706
+S        0.333333333   0.333333333  -0.058044206
+
+K_POINTS automatic
+ 40 40 1 0 0 0 
+

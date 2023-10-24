@@ -1,0 +1,47 @@
+&CONTROL
+  title = ' GeS_PZ ',
+  calculation = 'scf',
+  restart_mode = 'from_scratch', 
+  nstep  = 200,
+  tstress = .TRUE.,
+  tprnfor = .TRUE.,
+  prefix = 'ges',
+  pseudo_dir='../../../ps',
+  outdir = './tmp'
+/
+&SYSTEM
+  ibrav = 0,
+  celldm(1) = 6.30,
+  nat = 2,
+  ntyp = 2,
+  nbnd =10,
+  ecutwfc = 45.0,
+  ecutrho =270.0,
+/
+&ELECTRONS
+  conv_thr  =  1.0d-8
+/
+&ions
+/
+&cell
+ cell_dofree='2Dxy'
+/
+
+ATOMIC_SPECIES
+Ge 72.59 Ge.UPF
+S  32.06 S.UPF
+
+
+CELL_PARAMETERS (alat=  6.30000000)
+   0.951589720   0.000166574   0.000000000
+   0.000166572   0.951636067   0.000000000
+   0.000000000   0.000000000   3.378690000
+
+ATOMIC_POSITIONS (crystal)
+Ge      -0.000978685  -0.002050188   0.054959610
+S        0.502905547   0.506070748  -0.044959610
+
+
+K_POINTS automatic
+40 40 1 0 0 0 
+

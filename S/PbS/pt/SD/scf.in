@@ -1,0 +1,46 @@
+&CONTROL
+  title = ' PbS_PZ ',
+  calculation = 'scf',
+  restart_mode = 'from_scratch', 
+  nstep  = 200,
+  tstress = .TRUE.,
+  tprnfor = .TRUE.,
+  prefix = 'pbs',
+  pseudo_dir='../../../ps',
+  outdir = './tmp'
+/
+&SYSTEM
+  ibrav = 0,
+  celldm(1) = 7.30,
+  nat = 2,
+  ntyp = 2,
+  nbnd =10,
+  ecutwfc = 45.0,
+  ecutrho =270.0,
+/
+&ELECTRONS
+  conv_thr  =  1.0d-8
+/
+&ions
+/
+&cell
+ cell_dofree='2Dxy'
+/
+
+ATOMIC_SPECIES
+Pb 207.2 Pb.UPF
+S  32.06 S.UPF
+
+CELL_PARAMETERS (alat=  7.30000000)
+   0.918035723   0.000328238   0.000000000
+   0.000328226   0.918097830   0.000000000
+   0.000000000   0.000000000   3.378690000
+
+ATOMIC_POSITIONS (crystal)
+Pb       0.002301862   0.004773335   0.050232184
+S        0.499625000   0.499247225  -0.040232184
+
+
+K_POINTS automatic
+40 40 1 0 0 0 
+
