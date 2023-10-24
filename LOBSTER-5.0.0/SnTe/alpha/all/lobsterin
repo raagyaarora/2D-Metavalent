@@ -1,0 +1,8 @@
+ COHPstartEnergy  -30
+COHPendEnergy      20
+COHPsteps 1000
+!usebasisset pbeVaspFit2015
+userecommendedbasisfunctions
+
+cohpGenerator from 2.8 to 3.2 type Sn type Te orbitalwise
+

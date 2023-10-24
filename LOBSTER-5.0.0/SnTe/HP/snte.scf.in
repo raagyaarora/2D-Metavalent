@@ -1,0 +1,52 @@
+&CONTROL
+  title = ' PbTe_PZ ',
+  calculation = 'scf',
+  restart_mode = 'from_scratch',
+  nstep  = 200,
+  tstress = .TRUE.,
+  tprnfor = .TRUE.,
+  prefix = 'snte',
+  pseudo_dir='/home/raagya/pseudo',
+  outdir = './tmp'
+  wf_collect=.true.,
+  verbosity='high',
+/
+&SYSTEM
+  ibrav = 0,
+  celldm(1) =9.806,
+  nat = 2,
+  ntyp = 2,
+  occupations='smearing',
+  smearing='fd',
+  degauss=0.003,
+  nbnd=40,
+  ecutwfc = 50.0,
+  ecutrho =400.0,
+  noinv=.true.,
+  nosym=.true.,
+/
+
+&ELECTRONS
+  conv_thr  =  1.0d-8
+/
+&ions
+/
+&cell
+/
+
+ATOMIC_SPECIES
+Sn  118.71 Sn.pz-dn-kjpaw_psl.0.2.UPF
+Te  127.6 Te.pz-dn-kjpaw_psl.0.2.2.UPF
+
+
+CELL_PARAMETERS (alat=  9.80600000)
+   0.979264835  -0.000000000   0.000000000
+   0.489632418   0.848068225   0.000000000
+   0.000000000   0.000000000   3.000000000
+
+ATOMIC_POSITIONS (crystal)
+Sn      -0.000000000   0.000000000   0.000000000
+Te       0.333333333   0.333333333   0.000000000
+
+K_POINTS automatic
+ 40 40 1 0 0 0

@@ -1,0 +1,8 @@
+ COHPstartEnergy  -30
+COHPendEnergy      20
+COHPsteps 1000
+!usebasisset pbeVaspFit2015
+userecommendedbasisfunctions
+
+cohpbetween atom 1 atom 2 orbitalwise orbitalwise
+
